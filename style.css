@@ -1,0 +1,15 @@
+.container{
+  max-width: 400px;
+}
+
+.edit, .delete{
+  cursor: pointer;
+}
+
+.edit:hover{
+  color: DodgerBlue;
+}
+
+.delete:hover{
+  color:crimson;
+}

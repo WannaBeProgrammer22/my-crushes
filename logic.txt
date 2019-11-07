@@ -1,0 +1,28 @@
+get reference of add form, list, search input, edit form
+
+create a add submit listener to the form and add it to the ul list
+-create a function that will accept the value and add it to the list
+-if the value inputed is nothing then dont add it to the list
+-after that reset the add form
+
+
+delete a crush
+-if the icon is click then delete that li element row
+-use event delegation - select a parent class then if the element has a delete class then traverse to the html doc and get the parent element to delete the list li 
+
+
+edit a crush
+-if the icon is click then the edit form will show
+then get the value of the current edit value and apply it to the input edit form and focus it so ez editing
+-listen when the user click escape button and if that happen hide the edit form using keyup event on the edit input
+-if submitted then apply the updated value to the current li list item and hide the edit form
+
+
+search crush
+-add event listener keyup
+-get keyword and create a filter function
+
+filter function
+-get the list of all li items
+-filter them if it doesn't match keyword add a class filtered
+-filter them if it does match keyword remove class filtered
