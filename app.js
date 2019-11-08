@@ -1,6 +1,7 @@
 const addForm = document.querySelector('.add');
 const editForm = document.querySelector('.edit');
 const crushes = document.querySelector('.crushes');
+const search = document.querySelector('.search input');
 let currentEditValue = '';
 
 const generateTemplate = todo => {
@@ -81,4 +82,22 @@ editForm.edit.addEventListener('keyup', e => {
   if (e.key === 'Escape') {
     editForm.classList.add('d-none');
   }
+});
+
+// filter function
+const filterCrush = keyword => {
+  const lists = Array.from(crushes.children);
+  lists.forEach(list => {
+    if (list.firstElementChild.textContent.trim().toLowerCase().includes(keyword)) {
+      list.classList.remove('filtered');
+    } else {
+      list.classList.add('filtered');
+    }
+  })
+}
+
+// search crush
+search.addEventListener('keyup', e => {
+  const keyword = e.target.value;
+  filterCrush(keyword.toLowerCase().trim());
 });
